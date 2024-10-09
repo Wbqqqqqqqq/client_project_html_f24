@@ -1,0 +1,86 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+    font-family: "IBM Plex Super Family", Montserrat, "Nunito Sans", Merriweather; 
+}
+body{
+    background-color: #FFCB05;
+}
+h1 {
+    font-size: normal;
+}
+h2, h3{
+    font-size: small;
+    font-weight: bold;
+    color: #00274C
+}
+
+p{
+    font-size: smaller;
+    line-height: 1.5;
+}
+img{
+    border: solid 5px #00274C;
+    padding: 10px;
+    margin: 20px;
+    border-top-right-radius: 30px;
+}
+li{
+    display: inline-block;
+    margin-left: 40px;
+
+}
+ul {
+    border: dashed 3px #00274C;
+    max-width: fit-content;
+}
+.skip{
+    position: relative;
+    margin-bottom: 20px;
+}
+.skip a{
+    position: relative;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    background: #FFCB05;
+    color: #00274C;
+    padding: 10px;
+    z-index: 1000;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.skip a:focus, .skip a:hover{
+    background: #FFCB05;
+    color: #00274C;
+    outline: 2px solid #00274C;
+    opacity: 1;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html{
+        scroll-behavior: auto;
+    }
+    .skip a{
+      -webkit-transition: none;
+      transition: none;
+     }
+     nav ul {
+        flex-direction: row;
+    }
+    nav ul li {
+        margin: 5px 0;
+    } 
+}
+
+footer {
+    background-color: #FFCB05;
+    color: #00274C;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #00274C;
+    text-decoration: none;
+}
+
