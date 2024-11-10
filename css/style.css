@@ -1,7 +1,13 @@
 html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     font-family: "IBM Plex Super Family", Montserrat, "Nunito Sans", Merriweather; 
 }
-
+nav a.current {
+    font-weight: bold;
+    color: #FFCB05;
+    background-color: #00274C;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -103,4 +109,166 @@ footer a {
 
 .skip a[aria-label] {
     display: block;
+}
+
+@media screen and (min-width: 776px) {
+    body {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas:
+            "skip skip skip"
+            ". header ."
+            ". main ."
+            ". footer .";
+    }
+
+    header {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h2, h3 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    img {
+        border: solid 0.75vw #00274C;
+        padding: 15px;
+        margin: 15px;
+        border-top-right-radius: 7.5vw;
+    }
+
+    ul {
+        border: dashed 2.5px #00274C;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "skip skip skip"
+            ". header ."
+            ". main ."
+            ". footer .";
+    }
+
+    header {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 60px;
+    }
+
+    footer {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2, h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+
+    img {
+        border: solid 0.5vw #00274C;
+        padding: 20px;
+        margin: 20px;
+        border-top-right-radius: 5vw;
+        display: block;
+    }
+
+    ul {
+        border: dashed 2px #00274C;
+    }
+
+    a {
+        color: #00274C;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+.dark-mode {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+}
+
+.dark-mode header,
+.dark-mode footer {
+    background-color: #333333;
+    color: #E0E0E0;
+}
+
+.dark-mode main {
+    background-color: #2A2A2A;
+    color: #E0E0E0;
+}
+
+.dark-mode a {
+    color: #FFB74D;
+    text-decoration: underline;
+}
+
+.dark-mode a:hover {
+    color: #FFD95B;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6 {
+    color: #FFD95B;
+}
+
+.dark-mode nav a.current {
+    color: #FFB74D;
+    background-color: #444444;
+}
+
+.dark-mode button {
+    background-color: #FFB74D;
+    color: #1E1E1E;
+    border: 1px solid #E0E0E0;
+}
+
+.dark-mode img {
+    border-color: #FFB74D;
+}
+
+.dark-mode ul {
+    border-color: #FFB74D;
+}
+
+.dark-mode .skip a {
+    background-color: #FFB74D;
+    color: #1E1E1E;
+    outline-color: #E0E0E0;
 }

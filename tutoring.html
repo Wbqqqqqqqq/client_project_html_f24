@@ -10,10 +10,12 @@
 <body>
     <div class = "skip"><a href = "#main-content">Skip to Main Content</a></div>
     <header>
+        <button id="theme-toggle">Dark Mode</button>
         <nav>
             <ul>
+                
                 <li><a href="index.html">Home</a></li>
-                <li><a href="tutoring.html">UMSI Tutoring</a></li>
+                <li><a href="tutoring.html" class="current">UMSI Tutoring</a></li>
                 <li><a href="CEW+.html">Center for the Education of Women +</a></li>
                 <li><a href="CAPS.html">Counseling and Psychological Services</a></li>
             </ul>
@@ -21,6 +23,7 @@
         <h1>UMSI Tutoring</h1>
     </header>
     <main id="main-content">
+        
         <div>
             <h2>UMSI Programming Tutoring</h2>
             <p>We offer UMSI Programming Peer Tutors for both SI and SIADS courses. Review the course offerings and available support below to find the peer tutor that best suits your needs.</p>
@@ -56,7 +59,25 @@
 
     </main>
     <footer>
-        <p>UM Tutoring Survices | Contact Inforation: umsi.academicsuccess@umich.edu for support</p>
+        <p>&copy; <span id="year"></span> University of Michigan. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>
+
+<script>
+    // I referenced this code from https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            toggleButton.textContent = 'Light Mode';
+        } else {
+            toggleButton.textContent = 'Dark Mode';
+        }
+    });
+</script>
